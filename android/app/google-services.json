@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "980516064429",
+    "project_id": "backend-ilmu-tajwid",
+    "storage_bucket": "backend-ilmu-tajwid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980516064429:android:043fc07178b66075beca24",
+        "android_client_info": {
+          "package_name": "com.example.app_ilmu_tajwid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980516064429-hhrk94qk9u52ju9o23kisbg343ml18in.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_ilmu_tajwid",
+            "certificate_hash": "427d1ab793c2c5c38d5189f346079707d734d043"
+          }
+        },
+        {
+          "client_id": "980516064429-ce6o2q2ro7hchfgdc3msve5ftj4i2url.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBegcvPI_w13iRFj-3149yNo6vfvexbmvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980516064429-ce6o2q2ro7hchfgdc3msve5ftj4i2url.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
