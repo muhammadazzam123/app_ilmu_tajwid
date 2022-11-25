@@ -1,3 +1,4 @@
+import 'package:app_ilmu_tajwid/detail_soal.dart';
 import 'package:app_ilmu_tajwid/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -52,7 +53,14 @@ class SoalPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DetailSoal(),
+                        ),
+                      );
+                    },
                     child: Text(
                       'Mulai',
                       style: nunitoTextStyle.copyWith(

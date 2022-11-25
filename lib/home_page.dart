@@ -1,3 +1,7 @@
+import 'package:app_ilmu_tajwid/makhorijul_page.dart';
+import 'package:app_ilmu_tajwid/mim_page.dart';
+import 'package:app_ilmu_tajwid/nun_page.dart';
+import 'package:app_ilmu_tajwid/qolqolah_page.dart';
 import 'package:app_ilmu_tajwid/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -73,22 +77,38 @@ class HomePage extends StatelessWidget {
                 secondaryColor,
                 Image.asset('assets/nun.png', width: 60),
                 'Hukum Nun Sukun/Tanwin'),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const NunPage()));
+            },
           ),
           InkWell(
             child: GridContainer(primaryColor,
                 Image.asset('assets/fa.png', width: 60), 'Makhorijul Huruf'),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MakharijulPage()));
+            },
           ),
           InkWell(
             child: GridContainer(thirdColor,
                 Image.asset('assets/qof.png', width: 60), 'Hukum Qolqolah'),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const QolqolahPage()));
+            },
           ),
           InkWell(
             child: GridContainer(fourthColor,
                 Image.asset('assets/mim.png', width: 60), 'Hukum Mim Sukun'),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const MimPage()));
+            },
           ),
         ],
       );
