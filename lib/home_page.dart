@@ -1,7 +1,8 @@
-import 'package:app_ilmu_tajwid/makhorijul_page.dart';
-import 'package:app_ilmu_tajwid/mim_page.dart';
-import 'package:app_ilmu_tajwid/nun_page.dart';
-import 'package:app_ilmu_tajwid/qolqolah_page.dart';
+import 'package:app_ilmu_tajwid/animation.dart';
+import 'package:app_ilmu_tajwid/pages/makhorijul_page.dart';
+import 'package:app_ilmu_tajwid/pages/mim_page.dart';
+import 'package:app_ilmu_tajwid/pages/nun_page.dart';
+import 'package:app_ilmu_tajwid/pages/qolqolah_page.dart';
 import 'package:app_ilmu_tajwid/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -26,35 +27,55 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Yuk Belajar',
-                    style: nunitoTextStyle.copyWith(
-                        fontSize: 30, color: whiteColor, fontWeight: black),
+                  FadeAnimation(
+                    1,
+                    Text(
+                      'Yuk Belajar',
+                      style: nunitoTextStyle.copyWith(
+                          fontSize: 40, color: whiteColor, fontWeight: black),
+                    ),
                   ),
-                  Text(
-                    'Tajwid...',
-                    style: nunitoTextStyle.copyWith(
-                        fontSize: 30, color: whiteColor, fontWeight: black),
+                  FadeAnimation(
+                    1.1,
+                    Text(
+                      'Tajwid...',
+                      style: nunitoTextStyle.copyWith(
+                          fontSize: 40, color: whiteColor, fontWeight: black),
+                    ),
                   ),
                 ],
               ),
             ),
           ),
-          Image.asset(
-            'assets/Vector 1.png',
-            height: 157,
+          FadeAnimation(
+            1.2,
+            Image.asset(
+              'assets/Vector 1.png',
+              height: 157,
+            ),
           ),
-          Container(
+          FadeAnimation(
+            1.2,
+            Container(
               margin: const EdgeInsets.only(top: 99),
               alignment: Alignment.bottomRight,
               child: Image.asset(
                 'assets/Vector 2.png',
                 height: 157,
-              )),
-          Container(
+              ),
+            ),
+          ),
+          FadeAnimation(
+            1.3,
+            Container(
               margin: const EdgeInsets.only(top: 56),
               alignment: Alignment.bottomRight,
-              child: Image.asset('assets/Ikhwanngaji.png', height: 200)),
+              child: Image.asset(
+                'assets/Ikhwanngaji.png',
+                height: 200,
+              ),
+            ),
+          ),
         ],
       );
     }
@@ -78,36 +99,32 @@ class HomePage extends StatelessWidget {
                 Image.asset('assets/nun.png', width: 60),
                 'Hukum Nun Sukun/Tanwin'),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const NunPage()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => NunPage()));
             },
           ),
           InkWell(
             child: GridContainer(primaryColor,
                 Image.asset('assets/fa.png', width: 60), 'Makhorijul Huruf'),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const MakharijulPage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => MakharijulPage()));
             },
           ),
           InkWell(
             child: GridContainer(thirdColor,
                 Image.asset('assets/qof.png', width: 60), 'Hukum Qolqolah'),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const QolqolahPage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => QolqolahPage()));
             },
           ),
           InkWell(
             child: GridContainer(fourthColor,
                 Image.asset('assets/mim.png', width: 60), 'Hukum Mim Sukun'),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const MimPage()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => MimPage()));
             },
           ),
         ],
@@ -145,14 +162,21 @@ class GridContainer extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            image,
-            SizedBox(
-              width: 103,
-              child: Text(
-                titleText,
-                style: nunitoTextStyle.copyWith(
-                    color: whiteColor, fontWeight: bold, fontSize: 15),
-                textAlign: TextAlign.center,
+            FadeAnimation(
+              1.4,
+              image,
+            ),
+            const SizedBox(height: 10),
+            FadeAnimation(
+              1.5,
+              SizedBox(
+                width: 103,
+                child: Text(
+                  titleText,
+                  style: nunitoTextStyle.copyWith(
+                      color: whiteColor, fontWeight: bold, fontSize: 15),
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
           ],

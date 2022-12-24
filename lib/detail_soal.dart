@@ -11,7 +11,7 @@ class DetailSoal extends StatefulWidget {
 }
 
 class _DetailSoalState extends State<DetailSoal> {
-  final PageController? _controller = PageController(initialPage: 0);
+  final PageController _controller = PageController(initialPage: 0);
 
   bool isPressed = false;
   int score = 0;
@@ -35,7 +35,7 @@ class _DetailSoalState extends State<DetailSoal> {
         ),
         body: PageView.builder(
             physics: const NeverScrollableScrollPhysics(),
-            controller: _controller!,
+            controller: _controller,
             onPageChanged: (page) {
               setState(() {
                 isPressed = false;
@@ -138,7 +138,7 @@ class _DetailSoalState extends State<DetailSoal> {
                                       );
                                     }
                                   : () {
-                                      _controller!.nextPage(
+                                      _controller.nextPage(
                                           duration:
                                               const Duration(milliseconds: 500),
                                           curve: Curves.linear);

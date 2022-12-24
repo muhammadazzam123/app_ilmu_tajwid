@@ -1,3 +1,4 @@
+import 'package:app_ilmu_tajwid/animation.dart';
 import 'package:app_ilmu_tajwid/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -54,41 +55,58 @@ class _AboutPageState extends State<AboutPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/Ikhwan2.png', width: 130),
+                FadeAnimation(
+                  1,
+                  Image.asset(
+                    'assets/Ikhwan2.png',
+                    width: 130,
+                  ),
+                ),
                 const SizedBox(height: 40),
-                Text(
-                  'Syukron Katsiron',
-                  style: nunitoTextStyle.copyWith(
-                      fontSize: 32, color: primaryColor, fontWeight: extraBold),
+                FadeAnimation(
+                  1.1,
+                  Text(
+                    'Syukron Katsiron',
+                    style: nunitoTextStyle.copyWith(
+                        fontSize: 32,
+                        color: primaryColor,
+                        fontWeight: extraBold),
+                  ),
                 ),
                 const SizedBox(height: 20),
-                SizedBox(
-                  width: 264,
-                  child: Text(
-                    'telah menggunakan app ilmu tajwid sebagai sarana dalam pembelajaran ilmu tajwid',
-                    style: nunitoTextStyle.copyWith(
-                        fontSize: 15, color: blackColor, fontWeight: medium),
-                    textAlign: TextAlign.center,
+                FadeAnimation(
+                  1.2,
+                  SizedBox(
+                    width: 264,
+                    child: Text(
+                      'telah menggunakan app ilmu tajwid sebagai sarana dalam pembelajaran ilmu tajwid',
+                      style: nunitoTextStyle.copyWith(
+                          fontSize: 15, color: blackColor, fontWeight: medium),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 50),
-                SizedBox(
-                  height: 52,
-                  width: 188,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: primaryColor,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10))),
-                    onPressed: () {
-                      exitButton();
-                    },
-                    child: Text(
-                      'Keluar',
-                      style: nunitoTextStyle.copyWith(
-                        fontSize: 24,
-                        color: Colors.white,
-                        fontWeight: extraBold,
+                FadeAnimation(
+                  1.3,
+                  SizedBox(
+                    height: 52,
+                    width: 188,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: primaryColor,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                      onPressed: () {
+                        exitButton();
+                      },
+                      child: Text(
+                        'Keluar',
+                        style: nunitoTextStyle.copyWith(
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontWeight: extraBold,
+                        ),
                       ),
                     ),
                   ),

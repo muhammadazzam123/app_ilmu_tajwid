@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'App Ilmu Tajwid',
       theme: ThemeData(),
       home: const SplashPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
