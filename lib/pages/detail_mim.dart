@@ -30,7 +30,7 @@ class _DetailMimState extends State<DetailMim> {
     // Listen to states: playing, paused, stopped
     audioPlayer.onPlayerStateChanged.listen((state) {
       setState(() {
-        isPlaying = state == PlayerState.PLAYING;
+        isPlaying = state == PlayerState.playing;
       });
     });
   }
@@ -59,6 +59,7 @@ class _DetailMimState extends State<DetailMim> {
           ),
         ),
         body: ListView(
+          physics: const BouncingScrollPhysics(),
           children: [
             const SizedBox(height: 25),
             Container(
@@ -141,8 +142,7 @@ class _DetailMimState extends State<DetailMim> {
                         if (isPlaying) {
                           await audioPlayer.pause();
                         } else {
-                          final String url = widget.suara;
-                          await audioPlayer.play(url);
+                          await audioPlayer.play(UrlSource(widget.suara));
                         }
                       },
                       icon: Icon(

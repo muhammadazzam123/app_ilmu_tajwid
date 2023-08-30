@@ -1,4 +1,4 @@
-import 'package:app_ilmu_tajwid/animation.dart';
+// import 'package:app_ilmu_tajwid/animation.dart';
 import 'package:app_ilmu_tajwid/pages/makhorijul_page.dart';
 import 'package:app_ilmu_tajwid/pages/mim_page.dart';
 import 'package:app_ilmu_tajwid/pages/nun_page.dart';
@@ -27,55 +27,55 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  FadeAnimation(
-                    1,
-                    Text(
-                      'Yuk Belajar',
-                      style: nunitoTextStyle.copyWith(
-                          fontSize: 40, color: whiteColor, fontWeight: black),
-                    ),
+                  // FadeAnimation(
+                  //   1,
+                  Text(
+                    'Yuk Belajar',
+                    style: nunitoTextStyle.copyWith(
+                        fontSize: 40, color: whiteColor, fontWeight: black),
                   ),
-                  FadeAnimation(
-                    1.1,
-                    Text(
-                      'Tajwid...',
-                      style: nunitoTextStyle.copyWith(
-                          fontSize: 40, color: whiteColor, fontWeight: black),
-                    ),
+                  // ),
+                  // FadeAnimation(
+                  //   1.1,
+                  Text(
+                    'Tajwid...',
+                    style: nunitoTextStyle.copyWith(
+                        fontSize: 40, color: whiteColor, fontWeight: black),
                   ),
+                  // ),
                 ],
               ),
             ),
           ),
-          FadeAnimation(
-            1.2,
-            Image.asset(
-              'assets/Vector 1.png',
+          // FadeAnimation(
+          //   1.2,
+          Image.asset(
+            'assets/Vector 1.png',
+            height: 157,
+          ),
+          // ),
+          // FadeAnimation(
+          //   1.2,
+          Container(
+            margin: const EdgeInsets.only(top: 99),
+            alignment: Alignment.bottomRight,
+            child: Image.asset(
+              'assets/Vector 2.png',
               height: 157,
             ),
           ),
-          FadeAnimation(
-            1.2,
-            Container(
-              margin: const EdgeInsets.only(top: 99),
-              alignment: Alignment.bottomRight,
-              child: Image.asset(
-                'assets/Vector 2.png',
-                height: 157,
-              ),
+          // ),
+          // FadeAnimation(
+          //   1.3,
+          Container(
+            margin: const EdgeInsets.only(top: 56),
+            alignment: Alignment.bottomRight,
+            child: Image.asset(
+              'assets/Ikhwanngaji.png',
+              height: 200,
             ),
           ),
-          FadeAnimation(
-            1.3,
-            Container(
-              margin: const EdgeInsets.only(top: 56),
-              alignment: Alignment.bottomRight,
-              child: Image.asset(
-                'assets/Ikhwanngaji.png',
-                height: 200,
-              ),
-            ),
-          ),
+          // ),
         ],
       );
     }
@@ -133,6 +133,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             header(),
@@ -162,23 +163,23 @@ class GridContainer extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FadeAnimation(
-              1.4,
-              image,
-            ),
+            // FadeAnimation(
+            //   1.4,
+            image,
+            // ),
             const SizedBox(height: 10),
-            FadeAnimation(
-              1.5,
-              SizedBox(
-                width: 103,
-                child: Text(
-                  titleText,
-                  style: nunitoTextStyle.copyWith(
-                      color: whiteColor, fontWeight: bold, fontSize: 15),
-                  textAlign: TextAlign.center,
-                ),
+            // FadeAnimation(
+            //   1.5,
+            SizedBox(
+              width: 103,
+              child: Text(
+                titleText,
+                style: nunitoTextStyle.copyWith(
+                    color: whiteColor, fontWeight: bold, fontSize: 15),
+                textAlign: TextAlign.center,
               ),
             ),
+            // ),
           ],
         ),
       ),

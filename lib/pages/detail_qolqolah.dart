@@ -36,7 +36,7 @@ class _DetailQolqolahState extends State<DetailQolqolah> {
     // Listen to states: playing, paused, stopped
     audioPlayer.onPlayerStateChanged.listen((state) {
       setState(() {
-        isPlaying = state == PlayerState.PLAYING;
+        isPlaying = state == PlayerState.playing;
       });
     });
   }
@@ -65,6 +65,7 @@ class _DetailQolqolahState extends State<DetailQolqolah> {
           ),
         ),
         body: ListView(
+          physics: const BouncingScrollPhysics(),
           children: [
             const SizedBox(height: 20),
             Container(
@@ -147,8 +148,7 @@ class _DetailQolqolahState extends State<DetailQolqolah> {
                         if (isPlaying) {
                           await audioPlayer.pause();
                         } else {
-                          final String url = widget.suara;
-                          await audioPlayer.play(url);
+                          await audioPlayer.play(UrlSource(widget.suara));
                         }
                       },
                       icon: Icon(

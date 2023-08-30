@@ -27,7 +27,7 @@ class _DetailMakhrojState extends State<DetailMakhroj> {
     // Listen to states: playing, paused, stopped
     audioPlayer.onPlayerStateChanged.listen((state) {
       setState(() {
-        isPlaying = state == PlayerState.PLAYING;
+        isPlaying = state == PlayerState.playing;
       });
     });
   }
@@ -56,6 +56,7 @@ class _DetailMakhrojState extends State<DetailMakhroj> {
           ),
         ),
         body: ListView(
+          physics: const BouncingScrollPhysics(),
           children: [
             Image.network(
               widget.gambar,
@@ -100,8 +101,7 @@ class _DetailMakhrojState extends State<DetailMakhroj> {
                         if (isPlaying) {
                           await audioPlayer.pause();
                         } else {
-                          final String url = widget.suara;
-                          await audioPlayer.play(url);
+                          await audioPlayer.play(UrlSource(widget.suara));
                         }
                       },
                       icon: Icon(
